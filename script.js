@@ -148,3 +148,65 @@ function procesarPago(e) {
         vaciarCarrito();
     }
 }
+
+// Sistema de Delivery en Tiempo Real
+
+function actualizarEstadoDelivery() {
+    const ahora = new Date();
+    const hora = ahora.getHours();
+    const minutos = ahora.getMinutes();
+    const dia = ahora.getDay(); // 0 = Domingo, 6 = Sábado
+
+    const deliveryStatus = document.getElementById('delivery-status');
+    const currentHours = document.getElementById('current-hours');
+
+    // Horario: 7:00 AM - 11:00 PM (23:00) todos los días
+    const horaApertura = 7;
+    const horaCierre = 23;
+
+    const horaActual = hora + (minutos / 60);
+
+    if (horaActual >= horaApertura && horaActual < horaCierre) {
+        // Restaurante ABIERTO
+        deliveryStatus.textContent = 'Abierto ahora - Delivery disponible';
+        deliveryStatus.className = 'status-open';
+
+        // Calcular tiempo hasta el cierre
+        const horasRestantes = Math.floor(horaCierre - horaActual);
+        const minutosRestantes = Math.floor((horaCierre - horaActual - horasRestantes) * 60);
+
+        if (horasRestantes < 2) {
+            deliveryStatus.textContent = `Cierra en ${horasRestantes}h ${minutosRestantes}min`;
+        }
+    } else {
+        // Restaurante CERRADO
+        deliveryStatus.textContent = 'Cerrado - Abre a las 7:00 AM';
+        deliveryStatus.className = 'status-closed';
+
+        // Calcular tiempo hasta la apertura
+        let horasHastaApertura;
+        if (horaActual < horaApertura) {
+            horasHastaApertura = horaApertura - horaActual;
+        } else {
+            horasHastaApertura = (24 - horaActual) + horaApertura;
+        }
+
+        const horas = Math.floor(horasHastaApertura);
+        const mins = Math.floor((horasHastaApertura - horas) * 60);
+
+        if (horas < 12) {
+            deliveryStatus.textContent = `Abre en ${horas}h ${mins}min`;
+        }
+    }
+
+    // Actualizar horario mostrado
+    currentHours.textContent = 'Lun-Dom: 7:00 AM - 11:00 PM';
+}
+
+// Actualizar al cargar la página
+document.addEventListener('DOMContentLoaded', function () {
+    actualizarEstadoDelivery();
+
+    // Actualizar cada minuto
+    setInterval(actualizarEstadoDelivery, 60000);
+});

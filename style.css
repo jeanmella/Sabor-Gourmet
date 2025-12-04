@@ -1115,3 +1115,696 @@ html {
         padding: 0 15px;
     }
 }
+
+/* Copyright Section */
+
+.copyright {
+    background: linear-gradient(135deg, #1d1d1b 0%, #2d2d2b 100%);
+    padding: 30px 0;
+    border-top: 3px solid #ff9000;
+}
+
+.copyright-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright-text p {
+    color: #ffffff;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.copyright-text strong {
+    color: #ff9000;
+    font-weight: 700;
+}
+
+.developer {
+    color: #cccccc !important;
+    font-size: 13px !important;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 144, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.social-links a:hover {
+    background: #ff9000;
+    transform: translateY(-3px) scale(1.1);
+    border-color: #ffae00;
+    box-shadow: 0 5px 15px rgba(255, 144, 0, 0.4);
+}
+
+.social-links svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Copyright */
+
+@media (max-width:768px) {
+    .copyright {
+        padding: 25px 0;
+    }
+    
+    .copyright-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .copyright-text p {
+        font-size: 13px;
+    }
+    
+    .developer {
+        font-size: 12px !important;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .social-links a {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .social-links svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width:480px) {
+    .copyright {
+        padding: 20px 0;
+    }
+    
+    .copyright-text p {
+        font-size: 12px;
+    }
+    
+    .developer {
+        font-size: 11px !important;
+    }
+    
+    .social-links a {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .social-links svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Delivery Banner */
+
+.delivery-banner {
+    background: linear-gradient(135deg, #ff9000 0%, #ffae00 100%);
+    padding: 12px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    animation: slideDown 0.5s ease;
+}
+
+.delivery-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.delivery-status,
+.delivery-hours,
+.delivery-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.delivery-icon,
+.hours-icon,
+.phone-icon {
+    font-size: 20px;
+}
+
+.delivery-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.delivery-text strong {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.status-open {
+    color: #d4ffd4;
+    font-size: 12px;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+}
+
+.status-closed {
+    color: #ffcccc;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.delivery-phone a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.delivery-phone a:hover {
+    color: #1d1d1b;
+    transform: scale(1.05);
+}
+
+/* Copyright Mejorado */
+
+.copyright {
+    background: linear-gradient(135deg, #2d2d2b 0%, #1d1d1b 100%);
+    padding: 40px 0 25px 0;
+    border-top: 4px solid #ff9000;
+    position: relative;
+}
+
+.copyright::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff9000, #ffae00, #ff9000);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.copyright-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.copyright-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.copyright-text p {
+    color: #e0e0e0;
+    margin: 8px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.copyright-text strong {
+    color: #ffae00;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.developer {
+    color: #b0b0b0 !important;
+    font-size: 14px !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, rgba(255, 144, 0, 0.15), rgba(255, 174, 0, 0.15));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border: 2px solid rgba(255, 144, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #ff9000;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+    z-index: -1;
+}
+
+.social-links a:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) rotate(360deg) scale(1.15);
+    border-color: #ffae00;
+    box-shadow: 0 8px 20px rgba(255, 144, 0, 0.5);
+}
+
+.social-links svg {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Delivery */
+
+@media (max-width:991px) {
+    .delivery-info {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .delivery-status,
+    .delivery-hours,
+    .delivery-phone {
+        flex: 1 1 auto;
+        min-width: 150px;
+    }
+}
+
+@media (max-width:768px) {
+    .delivery-banner {
+        padding: 10px 0;
+    }
+    
+    .delivery-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .delivery-status,
+    .delivery-hours,
+    .delivery-phone {
+        font-size: 13px;
+    }
+    
+    .copyright {
+        padding: 30px 0 20px 0;
+    }
+    
+    .copyright-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .copyright-text p {
+        font-size: 14px;
+    }
+    
+    .developer {
+        font-size: 13px !important;
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .social-links a {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .social-links svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width:480px) {
+    .delivery-banner {
+        padding: 8px 0;
+    }
+    
+    .delivery-status,
+    .delivery-hours,
+    .delivery-phone {
+        font-size: 12px;
+    }
+    
+    .delivery-icon,
+    .hours-icon,
+    .phone-icon {
+        font-size: 18px;
+    }
+    
+    .copyright {
+        padding: 25px 0 15px 0;
+    }
+    
+    .copyright-text p {
+        font-size: 13px;
+    }
+    
+    .developer {
+        font-size: 12px !important;
+    }
+    
+    .social-links a {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .social-links svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Delivery Banner Mejorado con Iconos SVG */
+
+.delivery-banner {
+    background: linear-gradient(135deg, #ff9000 0%, #ffae00 50%, #ff9000 100%);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease infinite;
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.delivery-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.delivery-status,
+.delivery-hours,
+.delivery-phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.delivery-status:hover,
+.delivery-hours:hover,
+.delivery-phone:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.delivery-icon,
+.hours-icon,
+.phone-icon {
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    animation: iconFloat 2s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.delivery-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.delivery-text strong {
+    font-weight: 700;
+    font-size: 16px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.status-open {
+    color: #d4ffd4;
+    font-size: 13px;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+}
+
+.status-closed {
+    color: #ffcccc;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.delivery-phone a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.delivery-phone a:hover {
+    color: #1d1d1b;
+    transform: scale(1.05);
+}
+
+/* Copyright Bar Simplificado */
+
+.copyright-bar {
+    background: #1d1d1b;
+    padding: 20px 0;
+    border-top: 2px solid #ff9000;
+}
+
+.copyright-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.copyright-bar-content p {
+    color: #cccccc;
+    margin: 0;
+    font-size: 14px;
+}
+
+.copyright-bar-content strong {
+    color: #ff9000;
+    font-weight: 600;
+}
+
+.social-links-mini {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-links-mini a {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 144, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 144, 0, 0.3);
+}
+
+.social-links-mini a:hover {
+    background: #ff9000;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 144, 0, 0.4);
+}
+
+.social-links-mini svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Eliminar estilos antiguos del copyright */
+
+.copyright {
+    display: none;
+}
+
+/* Responsive Delivery Mejorado */
+
+@media (max-width:991px) {
+    .delivery-info {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .delivery-status,
+    .delivery-hours,
+    .delivery-phone {
+        flex: 1 1 auto;
+        min-width: 180px;
+        justify-content: center;
+    }
+}
+
+@media (max-width:768px) {
+    .delivery-banner {
+        padding: 12px 0;
+    }
+    
+    .delivery-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .delivery-status,
+    .delivery-hours,
+    .delivery-phone {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    
+    .delivery-text strong {
+        font-size: 15px;
+    }
+    
+    .copyright-bar-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .copyright-bar-content p {
+        font-size: 13px;
+    }
+    
+    .social-links-mini {
+        justify-content: center;
+    }
+}
+
+@media (max-width:480px) {
+    .delivery-banner {
+        padding: 10px 0;
+    }
+    
+    .delivery-status,
+    .delivery-hours,
+    .delivery-phone {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+    
+    .delivery-icon,
+    .hours-icon,
+    .phone-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .delivery-text strong {
+        font-size: 14px;
+    }
+    
+    .status-open,
+    .status-closed {
+        font-size: 12px;
+    }
+    
+    .copyright-bar {
+        padding: 15px 0;
+    }
+    
+    .copyright-bar-content p {
+        font-size: 12px;
+    }
+    
+    .social-links-mini a {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .social-links-mini svg {
+        width: 14px;
+        height: 14px;
+    }
+}
