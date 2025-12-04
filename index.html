@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Gourmet - Restaurante de Alta Cocina</title>
+    <meta name="description"
+        content="Disfruta de la mejor experiencia gastronómica con nuestros platillos gourmet preparados con ingredientes frescos y de la más alta calidad.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <img src="imagenes/bg.png" class="bg" alt="">
+        <div class="menu container">
+            <a href="#inicio" class="logo">Sabor Gourmet</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="imagenes/menu.png" class="menu-icono" alt="Menú">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#desayunos">Desayunos</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#productos">Menú</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#app">App</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="imagenes/car.svg" id="img-carrito" alt="Carrito de compras">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <div class="carrito-total">
+                                <p><strong>Total: <span id="total-carrito">$0</span></strong></p>
+                            </div>
+                            <div class="carrito-botones">
+                                <a href="#" id="procesar-pago" class="btn-3 btn-pagar">💳 Procesar Pago</a>
+                                <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="header-content container" id="inicio">
+            <div>
+                <h1><span>Bienvenido a Sabor Gourmet</span> donde cada platillo es una obra de arte</h1>
+                <p>
+                    Descubre una experiencia culinaria única con nuestros platillos gourmet elaborados por chefs
+                    expertos.
+                    Utilizamos únicamente ingredientes frescos y de temporada para garantizar el mejor sabor en cada
+                    bocado.
+                    Desde desayunos nutritivos hasta cenas elegantes, cada plato está diseñado para deleitar tus
+                    sentidos
+                    y crear momentos inolvidables.
+                </p>
+                <a href="#productos" class="btn-1">Ver Menú</a>
+            </div>
+            <div class="header-img">
+                <img src="imagenes/pl-1.png" alt="Platillo gourmet">
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="breakfast container" id="desayunos">
+        <h2>Desayunos Especiales</h2>
+        <p>
+            Comienza tu día con energía. Horario: 7:00am - 12:00pm
+        </p>
+
+        <div class="breakfast-content">
+
+            <div class="breakfast-1">
+                <img src="imagenes/b1.png" alt="Pancakes Deluxe">
+                <h3>Pancakes Deluxe</h3>
+            </div>
+
+            <div class="breakfast-1">
+                <img src="imagenes/b2.png" alt="Omelette Gourmet">
+                <h3>Omelette Gourmet</h3>
+            </div>
+
+            <div class="breakfast-1">
+                <img src="imagenes/b3.png" alt="Tostadas Francesas">
+                <h3>Tostadas Francesas</h3>
+            </div>
+
+            <div class="breakfast-1">
+                <img src="imagenes/b4.png" alt="Smoothie Bowl">
+                <h3>Smoothie Bowl</h3>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- Nueva Sección de Ofertas -->
+    <section class="ofertas container" id="ofertas">
+        <h2>🔥 Ofertas Especiales</h2>
+        <p>Aprovecha nuestras promociones exclusivas por tiempo limitado</p>
+
+        <div class="ofertas-content">
+            <div class="oferta-card">
+                <div class="oferta-badge">-30%</div>
+                <img src="imagenes/pla1.png" alt="Oferta Risotto">
+                <h3>Combo Risotto + Vino</h3>
+                <p>Risotto de trufa con copa de vino tinto premium</p>
+                <p class="precio-original">$500</p>
+                <p class="precio-oferta">$350</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al carrito</a>
+            </div>
+
+            <div class="oferta-card">
+                <div class="oferta-badge">-25%</div>
+                <img src="imagenes/pla2.png" alt="Oferta Salmón">
+                <h3>Menú Ejecutivo</h3>
+                <p>Salmón glaseado + ensalada + postre del día</p>
+                <p class="precio-original">$560</p>
+                <p class="precio-oferta">$420</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al carrito</a>
+            </div>
+
+            <div class="oferta-card">
+                <div class="oferta-badge">2x1</div>
+                <img src="imagenes/pla4.png" alt="Oferta Postre">
+                <h3>Doble Postre</h3>
+                <p>Dos tartas de chocolate belga al precio de una</p>
+                <p class="precio-original">$360</p>
+                <p class="precio-oferta">$180</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar al carrito</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="info">
+        <img class="bg-2" src="imagenes/bg-2.png" alt="">
+        <div class="info-content container">
+
+            <div class="info-img">
+                <img src="imagenes/breakfast.png" alt="Desayuno gourmet">
+            </div>
+
+            <div class="info-text">
+                <h2>Ingredientes Frescos, Sabor Excepcional</h2>
+                <p>
+                    En Sabor Gourmet nos comprometemos con la excelencia. Seleccionamos cuidadosamente cada ingrediente,
+                    trabajando con proveedores locales para garantizar frescura y calidad premium. Nuestros chefs
+                    combinan técnicas culinarias tradicionales con innovación moderna para crear experiencias
+                    gastronómicas memorables que superan todas las expectativas.
+                </p>
+                <a href="#productos" class="btn-1">Explorar Menú</a>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <main class="products container" id="productos">
+
+        <h2>Nuestro Menú Gourmet</h2>
+
+        <div class="box-container" id="lista-1">
+
+            <div class="box">
+                <img src="imagenes/pla1.png" alt="Risotto de Trufa">
+                <div class="product-txt">
+                    <h3>Risotto de Trufa</h3>
+                    <p>Arroz arborio con trufa negra y parmesano</p>
+                    <p class="precio">$380</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="imagenes/pla2.png" alt="Salmón Glaseado">
+                <div class="product-txt">
+                    <h3>Salmón Glaseado</h3>
+                    <p>Salmón fresco con glaseado de miel y mostaza</p>
+                    <p class="precio">$420</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="imagenes/pla3.png" alt="Filete Wellington">
+                <div class="product-txt">
+                    <h3>Filete Wellington</h3>
+                    <p>Filete de res envuelto en hojaldre con foie gras</p>
+                    <p class="precio">$450</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="imagenes/pla4.png" alt="Pasta Carbonara">
+                <div class="product-txt">
+                    <h3>Pasta Carbonara</h3>
+                    <p>Fettuccine con pancetta, huevo y pecorino romano</p>
+                    <p class="precio">$320</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="imagenes/pla1.png" alt="Paella Valenciana">
+                <div class="product-txt">
+                    <h3>Paella Valenciana</h3>
+                    <p>Arroz con mariscos frescos y azafrán auténtico</p>
+                    <p class="precio">$390</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="imagenes/pla2.png" alt="Cordero Mediterráneo">
+                <div class="product-txt">
+                    <h3>Cordero Mediterráneo</h3>
+                    <p>Rack de cordero con hierbas y reducción de vino</p>
+                    <p class="precio">$440</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="imagenes/pla3.png" alt="Ceviche Premium">
+                <div class="product-txt">
+                    <h3>Ceviche Premium</h3>
+                    <p>Pescado fresco marinado con cítricos y ají amarillo</p>
+                    <p class="precio">$280</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="imagenes/pla4.png" alt="Tarta de Chocolate">
+                <div class="product-txt">
+                    <h3>Tarta de Chocolate</h3>
+                    <p>Postre de chocolate belga con frambuesas frescas</p>
+                    <p class="precio">$180</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar al carrito</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="btn-2" id="load-more">Ver Más Platillos</div>
+
+    </main>
+
+    <!-- Nueva Sección de Reseñas -->
+    <section class="resenas container" id="resenas">
+        <h2>⭐ Lo Que Dicen Nuestros Clientes</h2>
+        <div class="ranking-general">
+            <div class="estrellas-grandes">
+                <span class="estrella">★</span>
+                <span class="estrella">★</span>
+                <span class="estrella">★</span>
+                <span class="estrella">★</span>
+                <span class="estrella">★</span>
+            </div>
+            <p class="puntuacion">5.0 de 5.0 estrellas</p>
+            <p class="total-resenas">Basado en 1,247 reseñas verificadas</p>
+        </div>
+
+        <div class="resenas-content">
+            <div class="resena-card">
+                <div class="resena-header">
+                    <div class="resena-estrellas">
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                    </div>
+                    <p class="resena-fecha">Hace 2 días</p>
+                </div>
+                <h4>¡Experiencia Increíble!</h4>
+                <p class="resena-texto">
+                    "El Risotto de Trufa es simplemente espectacular. La atención al detalle y la calidad de los
+                    ingredientes
+                    son incomparables. Definitivamente volveremos."
+                </p>
+                <p class="resena-autor">- María González</p>
+            </div>
+
+            <div class="resena-card">
+                <div class="resena-header">
+                    <div class="resena-estrellas">
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                    </div>
+                    <p class="resena-fecha">Hace 5 días</p>
+                </div>
+                <h4>Mejor Restaurante de la Ciudad</h4>
+                <p class="resena-texto">
+                    "Celebramos nuestro aniversario aquí y fue perfecto. El Filete Wellington estaba en su punto exacto
+                    y el servicio fue impecable. Altamente recomendado."
+                </p>
+                <p class="resena-autor">- Carlos Ramírez</p>
+            </div>
+
+            <div class="resena-card">
+                <div class="resena-header">
+                    <div class="resena-estrellas">
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                        <span class="estrella">★</span>
+                    </div>
+                    <p class="resena-fecha">Hace 1 semana</p>
+                </div>
+                <h4>Calidad Premium Garantizada</h4>
+                <p class="resena-texto">
+                    "Los desayunos son de otro nivel. Los Pancakes Deluxe son los mejores que he probado.
+                    El ambiente es acogedor y el personal muy atento."
+                </p>
+                <p class="resena-autor">- Ana Martínez</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="app container" id="app">
+
+        <div class="app-txt">
+
+            <h2>Descarga Nuestra App y Disfruta de Beneficios Exclusivos</h2>
+
+            <p>
+                Lleva Sabor Gourmet contigo a donde vayas. Con nuestra app móvil podrás hacer reservaciones,
+                ordenar para llevar, acceder a menús exclusivos y recibir notificaciones de nuestras promociones
+                especiales.
+                Acumula puntos con cada compra y canjéalos por descuentos. ¡Descarga ahora y obtén un 15% de descuento
+                en tu primera orden!
+            </p>
+
+            <div class="descarga">
+                <img src="imagenes/store1.png" alt="Descargar en App Store">
+                <img src="imagenes/store2.png" alt="Descargar en Google Play">
+            </div>
+
+        </div>
+
+        <div class="app-img">
+            <img src="imagenes/app.png" alt="App móvil Sabor Gourmet">
+
+        </div>
+
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container">
+
+            <div class="link">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#desayunos">Desayunos</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#productos">Menú</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#app">App Móvil</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#productos">Reservaciones</a></li>
+                    <li><a href="#productos">Para Llevar</a></li>
+                    <li><a href="#productos">Catering</a></li>
+                    <li><a href="#productos">Eventos Privados</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li><a href="mailto:info@saborgourmet.com">info@saborgourmet.com</a></li>
+                    <li><a href="#">Av. Gourmet 123, Ciudad</a></li>
+                    <li><a href="#">Lun-Dom: 7:00-23:00</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Descarga la App</h3>
+                <div class="descarga">
+                    <img src="imagenes/store1.png" alt="Descargar en App Store">
+                    <img src="imagenes/store2.png" alt="Descargar en Google Play">
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
