@@ -2150,19 +2150,525 @@
             background: linear-gradient(135deg, #5e81f4, #7b9aff);
         }
 
-        /* Mobile Optimizations */
-        @media (max-width: 768px) {
-            .floating-reserve-btn {
-                bottom: 20px;
-                right: 20px;
-                padding: 14px 20px;
+        /* ========================================
+           RESPONSIVE DESIGN - MEDIA QUERIES
+           ======================================== */
+
+        /* Extra Small Devices - Mobile Phones (Portrait) */
+        @media (max-width: 480px) {
+
+            /* Typography */
+            h1 {
+                font-size: 32px !important;
+                line-height: 40px !important;
+            }
+
+            h2 {
+                font-size: 28px !important;
+                line-height: 36px !important;
+            }
+
+            h3 {
+                font-size: 18px !important;
+            }
+
+            p {
+                font-size: 14px !important;
+            }
+
+            /* Container */
+            .container {
+                padding: 0 15px;
+            }
+
+            /* Header */
+            .header {
+                min-height: 50vh;
+            }
+
+            .header-content {
+                padding: 80px 15px 20px 15px !important;
+            }
+
+            .header-content h1 {
+                font-size: 28px !important;
+                line-height: 36px !important;
+            }
+
+            .header-content h1 span {
+                font-size: 32px !important;
+            }
+
+            .header-content p {
+                font-size: 14px !important;
+                margin-bottom: 25px;
+            }
+
+            .header-img img {
+                max-width: 250px !important;
+            }
+
+            /* Buttons */
+            .btn-1,
+            .btn-2,
+            .btn-3 {
+                padding: 12px 24px;
                 font-size: 14px;
             }
 
-            .floating-reserve-btn .text {
+            /* Breakfast Section */
+            .breakfast {
+                padding: 20px 15px !important;
+            }
+
+            .breakfast-premium {
+                padding: 50px 15px !important;
+            }
+
+            .breakfast-header h2 {
+                font-size: 32px !important;
+            }
+
+            .breakfast-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px;
+            }
+
+            .breakfast-card.featured {
+                grid-column: span 1 !important;
+                flex-direction: column !important;
+            }
+
+            .breakfast-card.featured .breakfast-card-image {
+                min-height: 250px !important;
+            }
+
+            .breakfast-card-content {
+                padding: 20px !important;
+            }
+
+            .breakfast-card.featured .breakfast-card-content {
+                padding: 25px !important;
+            }
+
+            .breakfast-price {
+                font-size: 24px !important;
+            }
+
+            /* Products Grid */
+            .box-container {
+                grid-template-columns: 1fr !important;
+                gap: 20px;
+            }
+
+            .box img {
+                height: 220px;
+            }
+
+            /* Delivery Banner */
+            .delivery-banner {
+                padding: 10px 0;
+            }
+
+            .delivery-info {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .delivery-status,
+            .delivery-hours,
+            .delivery-phone {
+                font-size: 13px;
+            }
+
+            /* Shopping Cart */
+            .submenu:hover #carrito {
+                min-width: 100% !important;
+                max-width: 100% !important;
+                right: 0 !important;
+                left: 0 !important;
+                padding: 15px;
+            }
+
+            /* Reservations */
+            .reservas {
+                padding: 40px 15px !important;
+            }
+
+            .reserva-form {
+                padding: 25px 20px !important;
+            }
+
+            .form-row {
+                flex-direction: column !important;
+                gap: 0 !important;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            /* Reviews */
+            .resenas {
+                padding: 40px 15px !important;
+            }
+
+            .resenas-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px;
+            }
+
+            /* Trust Badges */
+            .trust-badges {
+                flex-direction: column !important;
+                gap: 15px;
+            }
+
+            .trust-badge {
+                width: 100%;
+            }
+
+            /* Statistics */
+            .trust-stats {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px;
+            }
+
+            .stat-number {
+                font-size: 28px !important;
+            }
+
+            /* Features Grid */
+            .features-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 30px 0 !important;
+            }
+
+            .link {
+                margin-bottom: 25px;
+            }
+
+            .link h3 {
+                font-size: 16px;
+            }
+
+            .link a {
+                font-size: 14px;
+            }
+
+            /* Dark Mode Button */
+            .dark-mode-btn {
+                width: 45px !important;
+                height: 45px !important;
+                font-size: 18px !important;
+                top: 70px !important;
+                right: 10px !important;
+            }
+
+            /* Floating Reserve Button */
+            .floating-reserve-btn {
+                bottom: 15px !important;
+                right: 15px !important;
+                padding: 12px 16px !important;
+                font-size: 13px !important;
+            }
+
+            .floating-reserve-btn .icon {
+                font-size: 20px;
+            }
+        }
+
+        /* Small Devices - Mobile Phones & Small Tablets */
+        @media (max-width: 768px) {
+
+            /* Navigation */
+            .menu {
+                padding: 15px 20px;
+            }
+
+            .menu label {
+                display: initial;
+            }
+
+            .menu .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #ff9000;
+                display: none;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+            }
+
+            body.dark-mode .menu .navbar {
+                background-color: #16213e;
+            }
+
+            .menu .navbar ul li {
+                width: 100%;
+                float: none;
+            }
+
+            .menu .navbar ul li a {
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .menu .navbar ul li a:hover {
+                color: #ffffff;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            #menu:checked~.navbar {
+                display: block;
+            }
+
+            /* Header */
+            .header {
+                min-height: 60vh;
+            }
+
+            .header-content {
+                padding: 100px 20px 30px 20px;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .header-content>div:first-child {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .header-content h1 {
+                font-size: 36px;
+                line-height: 44px;
+                margin-bottom: 20px;
+            }
+
+            .header-content h1 span {
+                font-size: 40px;
+            }
+
+            .header-content p {
+                font-size: 15px;
+            }
+
+            .header-img {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .header-img img {
+                max-width: 280px;
+            }
+
+            .bg {
                 display: none;
             }
 
+            /* CTA Buttons */
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .cta-buttons .btn-1 {
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Breakfast Section */
+            .breakfast {
+                padding: 30px 20px;
+            }
+
+            .breakfast-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .breakfast-1 {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 20px;
+            }
+
+            .breakfast-premium {
+                padding: 60px 20px;
+            }
+
+            .breakfast-header h2 {
+                font-size: 36px;
+            }
+
+            .breakfast-subtitle {
+                font-size: 16px;
+            }
+
+            .breakfast-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .breakfast-card.featured {
+                grid-column: span 1;
+                flex-direction: column;
+            }
+
+            .breakfast-card.featured .breakfast-card-image {
+                min-height: 280px;
+            }
+
+            .breakfast-card-content {
+                padding: 25px;
+            }
+
+            .breakfast-cta {
+                padding: 40px 25px;
+            }
+
+            .breakfast-cta-content h3 {
+                font-size: 26px;
+            }
+
+            /* Products Section */
+            .box-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            /* Shopping Cart */
+            .submenu:hover #carrito {
+                min-width: 320px;
+                max-width: 90vw;
+                right: 10px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 8px 5px;
+            }
+
+            .carrito-total p {
+                font-size: 16px;
+            }
+
+            #total-carrito {
+                font-size: 20px;
+            }
+
+            /* Reservations */
+            .reservas {
+                padding: 50px 20px;
+            }
+
+            .reserva-form {
+                padding: 30px 25px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            /* Reviews */
+            .resenas {
+                padding: 50px 20px;
+            }
+
+            .resenas-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            /* Why Choose Us */
+            .why-choose-us {
+                padding: 50px 20px;
+            }
+
+            .trust-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .stat-label {
+                font-size: 13px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .trust-badges {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .trust-badge {
+                flex: 1 1 45%;
+                min-width: 150px;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 40px 0;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .link {
+                width: 100%;
+            }
+
+            /* Copyright Bar */
+            .copyright-bar {
+                padding: 20px 0;
+            }
+
+            .copyright-bar-content {
+                flex-direction: column;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .copyright-bar p {
+                font-size: 13px;
+            }
+
+            /* Popups & Banners */
             .urgency-banner {
                 flex-direction: column;
                 gap: 10px;
@@ -2176,24 +2682,109 @@
 
             .popup-content {
                 padding: 40px 25px;
+                margin: 20px;
             }
 
             #newsletter-form {
                 flex-direction: column;
             }
 
-            .cta-buttons {
-                flex-direction: column;
+            .floating-reserve-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 14px 20px;
+                font-size: 14px;
             }
 
-            .cta-buttons .btn-1 {
-                width: 100%;
+            .floating-reserve-btn .text {
+                display: none;
+            }
+
+            /* Dark Mode Button */
+            .dark-mode-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                top: 80px;
+                right: 15px;
+            }
+
+            /* App Download Section */
+            .app-download {
+                padding: 50px 20px !important;
+            }
+
+            .app-content {
+                flex-direction: column !important;
                 text-align: center;
+            }
+
+            .app-info {
+                max-width: 100% !important;
+            }
+
+            .app-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .app-mockup {
+                margin-top: 30px;
             }
         }
 
-        /* Responsive */
-        @media (max-width:991px) {
+        /* Medium Devices - Tablets */
+        @media (min-width: 769px) and (max-width: 991px) {
+
+            /* Container */
+            .container {
+                padding: 0 30px;
+            }
+
+            /* Header */
+            .header-content h1 {
+                font-size: 45px;
+                line-height: 54px;
+            }
+
+            .header-content h1 span {
+                font-size: 50px;
+            }
+
+            /* Breakfast Grid */
+            .breakfast-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .breakfast-card.featured {
+                grid-column: span 2;
+            }
+
+            /* Products Grid */
+            .box-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            /* Features Grid */
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Trust Stats */
+            .trust-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            /* Reviews */
+            .resenas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Large Tablets & Small Desktops */
+        @media (max-width: 991px) {
             .menu {
                 padding: 20px;
             }
@@ -2219,82 +2810,59 @@
                 color: #ffffff;
             }
 
-            .logo {
-                display: none;
-            }
-
             #menu:checked~.navbar {
                 display: initial;
-            }
-
-            .submenu:hover #carrito {
-                width: 100%;
             }
 
             .bg {
                 display: none;
             }
+        }
 
-            .header-content {
-                padding: 100px 30px 30px 30px;
-                flex-direction: column;
-                gap: 30px;
+        /* Large Tablets */
+        @media (min-width: 992px) and (max-width: 1024px) {
+
+            /* Container */
+            .container {
+                max-width: 960px;
             }
 
-            .header-content>div:first-child {
-                text-align: center;
-                max-width: 100%;
+            /* Breakfast Grid */
+            .breakfast-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .header-content h1 {
-                font-size: 38px;
-                line-height: 48px;
-                margin-bottom: 20px;
+            .breakfast-card.featured {
+                grid-column: span 2;
             }
 
-            .header-content h1 span {
-                font-size: 42px;
+            /* Products Grid */
+            .box-container {
+                grid-template-columns: repeat(3, 1fr);
             }
 
-            .header-img {
-                width: 100%;
-                justify-content: center;
+            /* Features */
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Desktop - Fine-tune for large screens */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1200px;
             }
 
-            .header-img img {
-                max-width: 300px;
+            .breakfast-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
 
-            .breakfast {
-                padding: 30px;
+            .breakfast-card.featured {
+                grid-column: span 3;
             }
 
-            .breakfast-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .breakfast-1 {
-                width: 100%;
-                margin-bottom: 25px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .dark-mode-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-                top: 80px;
-                right: 15px;
-            }
-
-            .copyright-bar-content {
-                justify-content: center;
+            .box-container {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
         }
     </style>
