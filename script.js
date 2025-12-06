@@ -1,3 +1,13 @@
+﻿
+// ========================================
+// LOADING SCREEN
+// ========================================
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+    }, 2500);
+});
 let loadMoreBtn = document.querySelector('#load-more');
 let currentItem = 4;
 
@@ -122,7 +132,7 @@ function calcularTotal() {
         total += precio;
     });
 
-    totalCarrito.textContent = `$${total}`;
+    totalCarrito.textContent = `$${total.toFixed(2)}`;
 }
 
 function procesarPago(e) {
@@ -209,4 +219,83 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Actualizar cada minuto
     setInterval(actualizarEstadoDelivery, 60000);
+});
+
+// ========================================
+// RESERVATION SYSTEM
+// ========================================
+document.addEventListener('DOMContentLoaded', function () {
+    const reservaForm = document.getElementById('reserva-form');
+    const fechaInput = document.getElementById('fecha');
+
+    // Set minimum date to today
+    if (fechaInput) {
+        const today = new Date().toISOString().split('T')[0];
+        fechaInput.min = today;
+    }
+
+    if (reservaForm) {
+        reservaForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                telefono: document.getElementById('telefono').value,
+                fecha: document.getElementById('fecha').value,
+                hora: document.getElementById('hora').value,
+                personas: document.getElementById('personas').value,
+                email: document.getElementById('email').value,
+                comentarios: document.getElementById('comentarios').value
+            };
+
+            // Generate reservation number
+            const numeroReserva = 'SG' + Date.now().toString().slice(-6);
+
+            // Show confirmation
+            document.querySelector('.reserva-form').style.display = 'none';
+            document.getElementById('reserva-confirmacion').style.display = 'block';
+            document.getElementById('numero-reserva').textContent = numeroReserva;
+
+            // Log reservation (in production, send to server)
+            console.log('Nueva Reserva:', formData, 'Número:', numeroReserva);
+
+            // Scroll to confirmation
+            document.getElementById('reserva-confirmacion').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+});
+
+function resetReserva() {
+    document.querySelector('.reserva-form').style.display = 'block';
+    document.getElementById('reserva-confirmacion').style.display = 'none';
+    document.getElementById('reserva-form').reset();
+    document.querySelector('.reservas').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ========================================
+// DARK MODE TOGGLE
+// ========================================
+document.addEventListener('DOMContentLoaded', function () {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check for saved dark mode preference
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-mode');
+
+            // Save preference
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    }
 });
